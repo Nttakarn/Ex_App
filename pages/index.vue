@@ -11,10 +11,10 @@
         </div>
       </v-col>
     </v-row>
-    <h1 style="margin-top:55px;" >
+    <h1 style="margin-top:20px;">
       KNN BANK
     </h1>
-    <h3 style="margin-bottom: 50px;">MOBILE APP</h3>
+    <h3>MOBILE APP</h3>
     <v-row>
       <v-container>
         <v-form>
@@ -23,20 +23,130 @@
             sm="6"
             md="4"
           >
-            <v-text-field
-              label="PLEASE ENTER YOUR PASSWORD"
-              placeholder="PASSWORD"
-              filled
-              rounded
-              dense
-            />
-            <v-btn
-              class="btn1"
-            >
-              <span class=txt1> LOGIN </span>
+            <v-menu transition="scroll-y-transition">
+              <template #activator="{ on, attrs }">
+                <v-text-field
+                  label="PLEASE ENTER YOUR PASSWORD"
+                  placeholder="PASSWORD"
+                  filled
+                  rounded
+                  dense
+                  v-bind="attrs"
+                  v-on="on"
+                />
+              </template>
+              <div class="box">
+                <v-row>
+                  <v-col class="d-flex justify-center ">
+                    <v-btn
+                      class="mx-2"
+                      fab
+                      dark
+                      color="primary"
+                    >
+                      1
+                    </v-btn>
+                    <v-btn
+                      class="mx-2"
+                      fab
+                      dark
+                      color="primary"
+                    >
+                      2
+                    </v-btn>
+                    <v-btn
+                      class="mx-2"
+                      fab
+                      dark
+                      color="primary"
+                    >
+                      3
+                    </v-btn>
+                  </v-col>
+                  <v-col class="d-flex justify-center ">
+                    <v-btn
+                      class="mx-2"
+                      fab
+                      dark
+                      color="primary"
+                    >
+                      4
+                    </v-btn>
+                    <v-btn
+                      class="mx-2"
+                      fab
+                      dark
+                      color="primary"
+                    >
+                      5
+                    </v-btn>
+                    <v-btn
+                      class="mx-2"
+                      fab
+                      dark
+                      color="primary"
+                    >
+                      6
+                    </v-btn>
+                  </v-col>
+                  <v-col class="d-flex justify-center ">
+                    <v-btn
+                      class="mx-2"
+                      fab
+                      dark
+                      color="primary"
+                    >
+                      7
+                    </v-btn>
+                    <v-btn
+                      class="mx-2"
+                      fab
+                      dark
+                      color="primary"
+                    >
+                      8
+                    </v-btn>
+                    <v-btn
+                      class="mx-2"
+                      fab
+                      dark
+                      color="primary"
+                    >
+                      9
+                    </v-btn>
+                  </v-col>
+                  <v-col class="d-flex justify-center ">
+                    <v-btn
+                      class="mx-2"
+                      fab
+                      dark
+                      color="primary"
+                    >
+                      0
+                    </v-btn>
+                    <v-btn
+                      class="mx-2"
+                      fab
+                      dark
+                      color="yellow "
+                    >
+                      x
+                    </v-btn>
+                  </v-col>
+                </v-row>
+              </div>
+            </v-menu>
+            <v-btn class="btn1">
+              <span class="txt1">LOGIN</span>
             </v-btn>
-            <p>Forgot password?</p>
-            <p>New to Back Apps? <a href="#">Sign up</a></p>
+            <p>
+              Forgot password?
+            </p>
+            <p>
+              New to Bank Apps? <router-link :to="{name: 'signup'}" class="nav-link">
+                Sign Up
+              </router-link>
+            </p>
           </v-col>
         </v-form>
       </v-container>
@@ -47,6 +157,9 @@
 .pa-7{
   margin-top: 100px;
 }
+h3{
+  margin-bottom: 50px;
+}
 .txt1{
   color: #000;
 }
@@ -54,4 +167,11 @@
   background: linear-gradient(to bottom,#FFEB3B,#FFC107);
   margin-bottom: 50px;
 }
+.box{
+  background-color: white;
+  padding: 10px;
+  border-radius: 25px;
+  font-size: 18px;
+}
+
 </style>
